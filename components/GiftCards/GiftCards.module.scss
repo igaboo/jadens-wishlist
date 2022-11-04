@@ -1,0 +1,22 @@
+.footer {
+  margin-block: 2rem;
+}
+
+.header {
+  padding-inline: 1rem;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  padding-inline: 1rem;
+}
+
+.item {
+  padding: 1rem 1.5rem;
+
+  border: 1px solid #0000002c;
+  border-radius: 50px;
+}
