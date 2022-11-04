@@ -26,7 +26,7 @@ export default function Home({
           background: ${bgColor.hex};
           color: ${darkFont ? "black" : "white"};
         }
-        a {
+        p a {
           color: ${linkColor.hex};
         }
       `}</style>
