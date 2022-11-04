@@ -4,6 +4,10 @@
 
 .header {
   padding-inline: 1rem;
+
+  p {
+    opacity: 50%;
+  }
 }
 
 .items {
@@ -15,8 +19,7 @@
 }
 
 .item {
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.4rem;
 
-  border: 1px solid #0000002c;
   border-radius: 50px;
 }
