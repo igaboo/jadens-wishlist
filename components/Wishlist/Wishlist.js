@@ -49,7 +49,9 @@ export function Wishlist({ bgColor, cardColor, items }) {
                         </p>
                       )}
                     </div>
-                    {description && <p>{description}</p>}
+                    {description && (
+                      <p className={styles.description}>{description}</p>
+                    )}
                     {attributes && (
                       <div className={styles.attributes}>
                         {attributes?.map(({ tag, value }, index) => {
