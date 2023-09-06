@@ -1,6 +1,6 @@
 import styles from "./GiftCards.module.scss";
 
-export function GiftCards({ giftCards, cardColor }) {
+export function GiftCards({ giftCards, linkColor }) {
   return (
     <footer className={styles.footer}>
       <div className={styles.header}>
@@ -14,10 +14,12 @@ export function GiftCards({ giftCards, cardColor }) {
             <div
               className={styles.item}
               key={index}
-              style={{ border: "1px solid " + cardColor.hex }}
+              style={{ backgroundColor: linkColor.hex + "20" }}
             >
               <p>
-                <a href={link}>{title}</a>
+                <a href={link} target="_blank" rel="noreferrer">
+                  {title}
+                </a>
               </p>
             </div>
           );

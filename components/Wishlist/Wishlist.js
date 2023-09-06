@@ -34,7 +34,7 @@ export function Wishlist({ bgColor, cardColor, items }) {
                   style={{ background: cardColor.hex }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <a href={link}>
+                  <a href={link} target="_blank" rel="noreferrer">
                     <img src={urlFor(image)} alt="item preview" />
                   </a>
                   <aside>
@@ -45,7 +45,9 @@ export function Wishlist({ bgColor, cardColor, items }) {
                       </div>
                       {link && (
                         <p>
-                          <a href={link}>View Online</a>
+                          <a href={link} target="_blank" rel="noreferrer">
+                            View Online
+                          </a>
                         </p>
                       )}
                     </div>

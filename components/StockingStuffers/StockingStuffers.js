@@ -12,7 +12,9 @@ export function StockingStuffers({ stockingItems }) {
         {stockingItems.map(({ title, description, emoji }, index) => {
           return (
             <div className={styles.item} key={index}>
-              <h1>{emoji}</h1>
+              <div className={styles.emojiContainer}>
+                <h1>{emoji}</h1>
+              </div>
               <h3>{title}</h3>
               <p>{description}</p>
             </div>

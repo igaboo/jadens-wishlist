@@ -9,7 +9,7 @@ export function Hero({ image, title, description, linkColor }) {
       <img
         src={urlFor(image)}
         alt="profile"
-        style={{ border: `3px solid ${linkColor.hex}` }}
+        style={{ border: `5px solid ${linkColor.hex}` }}
       />
       <h1>{title}</h1>
       <p>{description}</p>

@@ -31,13 +31,13 @@
   grid-template-columns: 1fr 3fr;
   gap: 15px;
 
-  padding: 15px;
+  padding: 1rem;
 
-  border: 1px solid #ffffff2c;
+  // border: 1px solid #ffffff2c;
   border-radius: 10px;
 
   .description {
-    color: rgb(255, 255, 255, 50%);
+    color: #ffffff80;
     padding: 10px;
 
     background-color: #00000025;
@@ -63,7 +63,8 @@
       justify-content: space-between;
 
       .price {
-        background-color: #ffffff21;
+        background-color: #2fcf2c30;
+        color: #2fcf2c;
 
         padding: 3px 6px;
         border-radius: 5px;
@@ -81,7 +82,7 @@
         padding: 3px 0 3px 6px;
 
         background-color: #00000017;
-        border: 1px solid #00000067;
+        border: 2px solid #00000067;
 
         border-radius: 5px;
 
