@@ -18,5 +18,10 @@ export default {
       title: "Emoji",
       type: "string",
     },
+    {
+      name: "info",
+      title: "Info",
+      type: "string",
+    },
   ],
 };

@@ -1,16 +1,13 @@
-.section {
-  margin-top: 50px;
-}
-
 .header {
   padding-inline: 1rem;
 
-  p {
-    opacity: 50%;
-  }
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .items {
+  margin-top: 10px;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -19,6 +16,8 @@
 }
 
 .item {
+  background-color: #fff;
+
   display: flex;
   column-gap: 15px;
   align-items: center;

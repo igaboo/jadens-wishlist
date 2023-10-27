@@ -4,10 +4,9 @@ import styles from "./StockingStuffers.module.scss";
 export function StockingStuffers({ stockingItems }) {
   return (
     <section className={styles.section}>
-      <div className={styles.header}>
+      {/* <div className={styles.header}>
         <h2>Stocking Stuffers</h2>
-      </div>
-      <hr />
+      </div> */}
       <div className={styles.items}>
         {stockingItems.map(({ title, description, emoji, info }, index) => {
           return (
