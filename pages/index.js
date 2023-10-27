@@ -45,8 +45,8 @@ export default function Home({
         darkFont={darkFont}
       />
       <Wishlist items={items} bgColor={bgColor} cardColor={cardColor} />
-      <StockingStuffers stockingItems={stockingItems} />
-      <GiftCards giftCards={giftCards} linkColor={linkColor} />
+      {/* <StockingStuffers stockingItems={stockingItems} /> */}
+      {/* <GiftCards giftCards={giftCards} linkColor={linkColor} /> */}
     </div>
   );
 }
