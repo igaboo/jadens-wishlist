@@ -1,0 +1,19 @@
+.attribute {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 26px auto 1fr;
+
+  color: #00000070;
+
+  // font awesome icon
+  svg {
+    width: 16px;
+    margin-right: 10px;
+  }
+
+  span {
+    margin-left: 15px;
+
+    color: #000;
+  }
+}
