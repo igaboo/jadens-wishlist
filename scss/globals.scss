@@ -39,11 +39,9 @@ li {
 a {
   color: inherit;
   text-decoration: none;
-}
 
-p a {
   &:hover {
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 
   &::after {
@@ -65,9 +63,9 @@ button {
 }
 
 hr {
-  margin-block: 15px;
+  margin-block: 10px;
 
-  border: 1px solid #ffffff2c;
+  border: 1px solid #00000000;
 }
 
 * {

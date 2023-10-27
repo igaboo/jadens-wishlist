@@ -4,8 +4,24 @@ export default {
   type: "document",
   fields: [
     {
-      name: "image",
-      title: "Image",
+      name: "imagem",
+      title: "Main Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "imaget",
+      title: "Top Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "imageb",
+      title: "Bottom Image",
       type: "image",
       options: {
         hotspot: true,

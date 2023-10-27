@@ -8,7 +8,7 @@ export function Wishlist({ bgColor, cardColor, items }) {
 
   return (
     <section className={styles.section}>
-      <div className={styles.navbar} style={{ background: bgColor.hex }}>
+      {/* <div className={styles.navbar} style={{ background: bgColor.hex }}>
         <div>
           <h2>My Wishlist</h2>
         </div>
@@ -21,52 +21,83 @@ export function Wishlist({ bgColor, cardColor, items }) {
           </button>
         </div>
         <hr />
-      </div>
+      </div> */}
       <div className={styles.items}>
         {items
           ?.sort((a, b) => (sort ? a.price - b.price : b.price - a.price))
           .map(
-            ({ _id, title, description, price, link, image, attributes }) => {
+            ({
+              _id,
+              title,
+              description,
+              price,
+              link,
+              imagem,
+              imaget,
+              imageb,
+              attributes,
+            }) => {
               return (
                 <div
                   className={styles.item}
-                  key={_id}
                   style={{ background: cardColor.hex }}
+                  key={_id}
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <a href={link} target="_blank" rel="noreferrer">
-                    <img src={urlFor(image)} alt="item preview" />
-                  </a>
-                  <aside>
-                    <div className={styles.header}>
-                      <div className={styles.title}>
-                        <h2>{title}</h2>
-                        <p className={styles.price}>${price}</p>
-                      </div>
-                      {link && (
-                        <p>
-                          <a href={link} target="_blank" rel="noreferrer">
-                            View Online
-                          </a>
-                        </p>
+                  <div className={styles.images}>
+                    <div className={styles.left}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      {imagem && (
+                        <img src={urlFor(imagem)} alt="item preview" />
                       )}
                     </div>
+
+                    <div className={styles.right}>
+                      {imaget && (
+                        <img
+                          className={styles.top}
+                          src={urlFor(imaget)}
+                          alt="item preview"
+                        />
+                      )}
+
+                      {imageb && (
+                        <img
+                          className={styles.btm}
+                          src={urlFor(imageb)}
+                          alt="item preview"
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  <div className={styles.text}>
+                    <h2>{title}</h2>
+
                     {description && (
                       <p className={styles.description}>{description}</p>
                     )}
-                    {attributes && (
-                      <div className={styles.attributes}>
-                        {attributes?.map(({ tag, value }, index) => {
-                          return (
-                            <h5 className={styles.attribute} key={index}>
-                              {tag}
-                              <span>{value}</span>
-                            </h5>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </aside>
+                  </div>
+
+                  {attributes && (
+                    <div className={styles.attributes}>
+                      {attributes?.map(({ tag, value }, index) => {
+                        return (
+                          <p className={styles.attribute} key={index}>
+                            {tag}
+                            <span>{value}</span>
+                          </p>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  <div className={styles.actions}>
+                    <a href={link} target="_blank" rel="noreferrer">
+                      View Online
+                    </a>
+
+                    <p className={styles.price}>${price}</p>
+                  </div>
                 </div>
               );
             }

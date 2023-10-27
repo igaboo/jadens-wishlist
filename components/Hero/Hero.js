@@ -2,17 +2,15 @@ import styles from "./Hero.module.scss";
 
 import { urlFor } from "../../lib/client";
 
-export function Hero({ image, title, description, linkColor }) {
+export function Hero({ image, title, description, darkFont }) {
   return (
     <header className={styles.header}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={urlFor(image)}
-        alt="profile"
-        style={{ border: `5px solid ${linkColor.hex}` }}
-      />
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <img src={urlFor(image)} alt="profile" />
+      <div className={styles.text}>
+        <h1 style={{ color: darkFont ? "#000" : "#fff" }}>{title}</h1>
+        <p style={{ color: darkFont ? "#00070" : "#fff70" }}>{description}</p>
+      </div>
     </header>
   );
 }

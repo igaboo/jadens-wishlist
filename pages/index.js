@@ -42,6 +42,7 @@ export default function Home({
         title={title}
         description={description}
         linkColor={linkColor}
+        darkFont={darkFont}
       />
       <Wishlist items={items} bgColor={bgColor} cardColor={cardColor} />
       <StockingStuffers stockingItems={stockingItems} />
