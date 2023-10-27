@@ -98,9 +98,15 @@
     gap: 10px;
 
     .attribute {
-      border-radius: 5px;
+      display: flex;
 
       color: #00000070;
+
+      svg {
+        // font awesome icon
+        width: 16px;
+        margin-right: 10px;
+      }
 
       span {
         margin-left: 15px;
@@ -139,7 +145,15 @@
 }
 
 @media screen and (max-width: 500px) {
-  .item {
+  .items .images {
     grid-template-columns: 1fr;
+
+    .right {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      border-radius: 15px !important;
+    }
   }
 }

@@ -57,6 +57,7 @@ export default {
           fields: [
             { name: "tag", type: "string", title: "Tag Name" },
             { name: "value", type: "string", title: "Tag Value" },
+            { name: "icon", type: "string", title: "Icon" },
           ],
         },
       ],
