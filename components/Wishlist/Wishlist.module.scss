@@ -98,7 +98,9 @@
     gap: 10px;
 
     .attribute {
-      display: flex;
+      display: grid;
+      grid-template-columns: 26px auto 1fr;
+      align-items: center;
 
       color: #00000070;
 

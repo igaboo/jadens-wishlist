@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { urlFor } from "../../lib/client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEyeDropperEmpty } from "@fortawesome/free-solid-svg-icons";
+import { fa } from "@fortawesome/free-solid-svg-icons";
 
 export function Wishlist({ bgColor, cardColor, items }) {
   const [sort, setSort] = useState(true);
@@ -82,10 +82,12 @@ export function Wishlist({ bgColor, cardColor, items }) {
 
                   {attributes && (
                     <div className={styles.attributes}>
-                      {attributes?.map(({ tag, value }, index) => {
+                      {attributes?.map(({ tag, value, icon }, index) => {
                         return (
                           <div className={styles.attribute} key={index}>
-                            <FontAwesomeIcon icon={faEyeDropperEmpty} />
+                            <FontAwesomeIcon
+                              icon={["fas", icon ? icon : "circle-right"]}
+                            />
                             <p>
                               {tag}
                               <span>{value}</span>
