@@ -152,10 +152,28 @@
 
     .right {
       grid-template-columns: 1fr 1fr;
+
+      img {
+        aspect-ratio: 2/1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 15px;
+      }
+
+      .top {
+        border-top-right-radius: 5px;
+      }
+
+      .btm {
+        border-top-right-radius: 5px;
+      }
     }
 
-    img {
-      border-radius: 15px !important;
+    .left {
+      img {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
     }
   }
 }
