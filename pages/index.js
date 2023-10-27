@@ -19,34 +19,38 @@ export default function Home({
   giftCards,
 }) {
   return (
-    <div className={styles.container}>
-      {/* custom colors rendered in ssr */}
-      <style jsx global>{`
-        body {
-          background: ${bgColor.hex};
-          color: ${darkFont ? "black" : "white"};
-        }
-        p a {
-          color: ${linkColor.hex};
-        }
-      `}</style>
+    <div className={styles.gradient}>
+      <div className={styles.gradient2}>
+        <div className={styles.container}>
+          {/* custom colors rendered in ssr */}
+          <style jsx global>{`
+            body {
+              background: ${bgColor.hex};
+              color: ${darkFont ? "black" : "white"};
+            }
+            p a {
+              color: ${linkColor.hex};
+            }
+          `}</style>
 
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="A wishlist of plentiful things" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+          <Head>
+            <title>{title}</title>
+            <meta name="description" content="A wishlist of plentiful things" />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-      <Hero
-        image={image}
-        title={title}
-        description={description}
-        linkColor={linkColor}
-        darkFont={darkFont}
-      />
-      <Wishlist items={items} bgColor={bgColor} cardColor={cardColor} />
-      {/* <StockingStuffers stockingItems={stockingItems} /> */}
-      {/* <GiftCards giftCards={giftCards} linkColor={linkColor} /> */}
+          <Hero
+            image={image}
+            title={title}
+            description={description}
+            linkColor={linkColor}
+            darkFont={darkFont}
+          />
+          <Wishlist items={items} bgColor={bgColor} cardColor={cardColor} />
+          {/* <StockingStuffers stockingItems={stockingItems} /> */}
+          {/* <GiftCards giftCards={giftCards} linkColor={linkColor} /> */}
+        </div>
+      </div>
     </div>
   );
 }

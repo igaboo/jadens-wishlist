@@ -1,6 +1,22 @@
 .container {
   width: min(100%, 600px);
   margin-inline: auto;
+}
 
-  margin-bottom: 70px;
+.gradient {
+  background: radial-gradient(
+    ellipse at 70% 50%,
+    rgba(211, 246, 150, 0.1) 0,
+    hsla(0, 0%, 85%, 0) 58%
+  );
+
+  padding-bottom: 70px;
+}
+
+.gradient2 {
+  background: radial-gradient(
+    ellipse at 0% 50%,
+    rgba(157, 150, 246, 0.1) 0,
+    hsla(0, 0%, 85%, 0) 58%
+  );
 }

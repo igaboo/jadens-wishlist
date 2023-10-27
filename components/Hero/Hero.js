@@ -8,7 +8,7 @@ export function Hero({ image, title, description, darkFont }) {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={urlFor(image)} alt="profile" />
       <div className={styles.text}>
-        <h1 style={{ color: darkFont ? "#000" : "#fff" }}>{title}</h1>
+        <h2 style={{ color: darkFont ? "#000" : "#fff" }}>{title}</h2>
         <p style={{ color: darkFont ? "#00070" : "#fff70" }}>{description}</p>
       </div>
     </header>
