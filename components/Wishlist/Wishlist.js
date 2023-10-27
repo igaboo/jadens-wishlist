@@ -1,32 +1,14 @@
 import styles from "./Wishlist.module.scss";
-import { useState } from "react";
 
 import { urlFor } from "../../lib/client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Attribute } from "../Attribute/Attribute";
 
 export function Wishlist({ bgColor, cardColor, items }) {
-  const [sort, setSort] = useState(true);
-
   return (
     <section className={styles.section}>
-      {/* <div className={styles.navbar} style={{ background: bgColor.hex }}>
-        <div>
-          <h2>My Wishlist</h2>
-        </div>
-        <div>
-          <p>{items.length} items</p>
-          <button onClick={() => setSort(!sort)}>
-            <p>
-              Sort by <span>{sort ? "Lowest Price ▼" : "Highest Price ▲"}</span>
-            </p>
-          </button>
-        </div>
-        <hr />
-      </div> */}
       <div className={styles.items}>
         {items
-          ?.sort((a, b) => (sort ? a.price - b.price : b.price - a.price))
+          ?.sort((a, b) => a.price - b.price)
           .map(
             ({
               _id,
