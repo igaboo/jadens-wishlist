@@ -62,5 +62,10 @@ export default {
         },
       ],
     },
+    {
+      name: "favorite",
+      title: "Favorite",
+      type: "boolean",
+    },
   ],
 };

@@ -40,10 +40,20 @@
     flex-direction: column;
 
     .info {
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
       gap: 10px;
 
-      opacity: 50%;
+      background-color: #fffccf;
+      color: #cbab1d;
+
+      padding: 10px;
+      border-radius: 15px;
+
+      h5 {
+        font-weight: 400;
+      }
 
       svg {
         width: 15px;
