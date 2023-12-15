@@ -15,14 +15,14 @@ export function Hero({ image, title, description, darkFont }) {
           {description}
         </p>
 
-        <div className={styles.attributes}>
+        {/* <div className={styles.attributes}>
           <Attribute
             tag="Email"
             value="jadenwatsond@gmail.com"
             icon="envelope"
           />
           <Attribute tag="Phone" value="530-333-7529" icon="phone" />
-        </div>
+        </div> */}
       </div>
     </header>
   );
