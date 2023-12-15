@@ -47,7 +47,14 @@ function WishlistItem({ item }) {
     imaget,
     imageb,
     attributes,
+    date,
   } = item;
+
+  const dateAdded = new Date(date);
+  const currentDate = new Date();
+
+  const diffTime = Math.abs(currentDate - dateAdded);
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
   return (
     <div className={styles.item} style={{ background: "#fff" }}>
@@ -78,8 +85,28 @@ function WishlistItem({ item }) {
 
       <div className={styles.text}>
         <div className={styles.textTitle}>
-          {favorite && <FontAwesomeIcon icon={["fas", "star"]} />}
           <h2>{title}</h2>
+          {favorite && <FontAwesomeIcon icon={["fas", "star"]} />}
+        </div>
+
+        <div className={styles.date}>
+          {diffDays < 8 && (
+            <>
+              <div className={styles.circle} />
+              <h5 className={styles.emphasized}>New</h5>
+            </>
+          )}
+
+          <h5>
+            Added{" "}
+            {diffDays < 30
+              ? diffDays === 0
+                ? "today"
+                : diffDays === 1
+                ? "yesterday"
+                : `${diffDays} days ago`
+              : dateAdded.toLocaleDateString()}
+          </h5>
         </div>
 
         {description && <p className={styles.description}>{description}</p>}

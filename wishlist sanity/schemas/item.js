@@ -67,5 +67,10 @@ export default {
       title: "Favorite",
       type: "boolean",
     },
+    {
+      name: "date",
+      title: "Date Added",
+      type: "datetime",
+    },
   ],
 };
