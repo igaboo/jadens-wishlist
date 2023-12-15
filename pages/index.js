@@ -14,6 +14,7 @@ export default function Home({
     image,
     title,
     description,
+    lastUpdated,
     colors: { bgColor, cardColor, linkColor, darkFont },
   },
   giftCards,
@@ -45,6 +46,7 @@ export default function Home({
             description={description}
             linkColor={linkColor}
             darkFont={darkFont}
+            lastUpdated={lastUpdated}
           />
           <Wishlist items={items} bgColor={bgColor} cardColor={cardColor} />
           <StockingStuffers stockingItems={stockingItems} />

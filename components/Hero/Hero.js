@@ -3,7 +3,13 @@ import styles from "./Hero.module.scss";
 import { urlFor } from "../../lib/client";
 import { Attribute } from "../Attribute/Attribute";
 
-export function Hero({ image, title, description, darkFont }) {
+export function Hero({ image, title, description, darkFont, lastUpdated }) {
+  const updatedDate = new Date(lastUpdated);
+  const currentDate = new Date();
+
+  const diffTime = Math.abs(currentDate - updatedDate);
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
   return (
     <header className={styles.header}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -15,14 +21,22 @@ export function Hero({ image, title, description, darkFont }) {
           {description}
         </p>
 
-        {/* <div className={styles.attributes}>
+        <div className={styles.attributes}>
           <Attribute
-            tag="Email"
-            value="jadenwatsond@gmail.com"
-            icon="envelope"
+            tag="Last Updated"
+            value={
+              diffDays < 30
+                ? diffDays === 0
+                  ? "Today"
+                  : diffDays === 1
+                  ? "Yesterday"
+                  : `${diffDays} days ago`
+                : updatedDate.toLocaleDateString()
+            }
+            icon="refresh"
           />
-          <Attribute tag="Phone" value="530-333-7529" icon="phone" />
-        </div> */}
+          {/* <Attribute tag="Phone" value="530-333-7529" icon="phone" /> */}
+        </div>
       </div>
     </header>
   );

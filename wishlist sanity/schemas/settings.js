@@ -32,5 +32,10 @@ export default {
         { name: "darkFont", type: "boolean", title: "Dark Text Color?" },
       ],
     },
+    {
+      name: "lastUpdated",
+      title: "Updated Date",
+      type: "datetime",
+    },
   ],
 };
